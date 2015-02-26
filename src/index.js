@@ -1,5 +1,4 @@
 var Request = require('request-promise')
-var Querystring = require('querystring')
 
 var Bolt = function(appId) {
     this.config = {

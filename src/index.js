@@ -9,9 +9,8 @@ var Bolt = function(appId) {
 }
 
 Bolt.prototype.postTweet = function* postTweet(message) {
-    payload = {links: [{
+    payload = {
             message: message
-        }]
     }
     var options = {
         uri: this.config.postTweetUrl,

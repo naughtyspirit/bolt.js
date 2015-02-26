@@ -1,5 +1,5 @@
 {
-  "name": "bolt",
+  "name": "bolt-js",
   "version": "0.0.1",
   "description": "Lightning fast marketing wiz",
   "main": "src/index.js",

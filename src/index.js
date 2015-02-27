@@ -24,7 +24,7 @@ Bolt.prototype.postTweet = function(message) {
     return Request(options)
 }
 
-Bolt.prototype.sendEmail = function* (parameters) {
+Bolt.prototype.sendEmail = function(parameters) {
     var options = {
         uri: this.config.sendEmailUrl,
         method: "POST",

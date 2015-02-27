@@ -11,7 +11,7 @@ var Bolt = function(appId) {
     return this
 }
 
-Bolt.prototype.postTweet = function* postTweet(message) {
+Bolt.prototype.postTweet = function(message) {
     var payload = {
             message: message
     }
@@ -21,19 +21,17 @@ Bolt.prototype.postTweet = function* postTweet(message) {
         json: true,
         body: payload
     }
-    return yield Request(options)
+    return Request(options)
 }
 
-Bolt.prototype.sendEmail = function* sendEmail(parameters) {
-    console.log(this.config.sendEmailUrl)
-
+Bolt.prototype.sendEmail = function* (parameters) {
     var options = {
         uri: this.config.sendEmailUrl,
         method: "POST",
         json: true,
         body: parameters
     }
-    return yield Request(options)
+    return Request(options)
 }
 
 module.exports = Bolt

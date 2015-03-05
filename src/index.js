@@ -5,7 +5,8 @@ const API_ENDPOINT = "https://bolt-api.herokuapp.com"
 var Bolt = function(appId) {
     this.config = {
         postTweetUrl: API_ENDPOINT + "/tweets?appId=" + appId,
-        sendEmailUrl: API_ENDPOINT + "/emails?appId=" + appId
+        sendEmailUrl: API_ENDPOINT + "/emails?appId=" + appId,
+        sendNotificationUrl: API_ENDPOINT + "/notifications?appId=" + appId
     }
 
     return this
@@ -27,6 +28,16 @@ Bolt.prototype.postTweet = function(message) {
 Bolt.prototype.sendEmail = function(parameters) {
     var options = {
         uri: this.config.sendEmailUrl,
+        method: "POST",
+        json: true,
+        body: parameters
+    }
+    return Request(options)
+}
+
+Bolt.prototype.sendNotification = function(parameters) {
+    var options = {
+        uri: this.config.sendNotificationUrl,
         method: "POST",
         json: true,
         body: parameters

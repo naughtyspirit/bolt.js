@@ -1,6 +1,6 @@
 {
   "name": "bolt-js",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Lightning fast marketing wiz",
   "main": "src/index.js",
   "author": "Naughty Spirit <hi@naughtyspirit.co> (http://naughtyspirit.co/)",

@@ -26,9 +26,9 @@ Bolt.prototype.postTweet = function(message) {
     return Request(options)
 }
 
-Bolt.prototype.followUsers = function(userIds) {
+Bolt.prototype.followUsers = function(usernames) {
     var payload = {
-            userIds: userIds
+            usernames: usernames
     }
     var options = {
         uri: this.config.followUsersUrl,
